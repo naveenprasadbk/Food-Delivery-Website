@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwi-Cart</title>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html{
+            background: #ececec
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9fd3c7;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .header h1{
+            margin-left: 10px;
+            color:#142d4c;
+            cursor: pointer;
+        }
+
+        .header ul{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .header ul li{
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .header ul li a{
+            color: black;
+            cursor: pointer;
+        }
+
+        .header ul li a:hover{
+            color: white;
+        }
+
+        .header button{
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        .header button:hover{
+            background-color: greenyellow;
+            color: black;
+        }
+
+        .cart{
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: rgb(159, 211, 199,0.5);
+                width: 350px;
+                height: 100vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                border-radius: 10px;
+                z-index: 2;
+            }
+
+            .cart-title{
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                padding: 10px;
+                border-bottom: 3px double black;
+            
+            }
+            .cart-box{
+                display: grid;
+                grid-template-columns: 32% 32% 36%;
+                padding: 15px;
+                border-bottom: 1px solid black;
+            }
+
+            .cart-box img{
+                width: 60px;
+                height: 60px;
+            }
+
+            .cart-box input{
+                width: 50px;
+                text-align: center;
+            }
+
+            .cart-food-title{
+                font-weight: bold;
+            }
+
+            .cart-content{
+                flex-grow: 1;
+                padding-bottom: 20px;
+            }
+
+            .total{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 8px;
+            }
+
+            .total-title{
+                font-weight: bold;
+            }
+
+            .total-Price{
+                margin-right: 30px;
+            }
+
+            .btn-buy{
+                display: grid;
+                place-items:center;
+                padding: 6px;
+                margin:20px;
+                margin-left: 53px;
+                background-color: grey;
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .btn-buy:hover{
+                background-color: black;
+                color: yellow;
+            }
+
+            .payment{
+                margin-left: 250px;
+                margin-top: 100px;
+            }
+
+            .payment input{
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+            @media (max-width: 480px) {
+                .header h1 {
+                    font-size: 20px;
+                }
+
+            .cart {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-radius: 0;
+                top: auto;
+                right: auto;
+                overflow: auto;
+            }
+
+            .cart-content {
+                padding: 10px;
+            }
+
+            .cart-box {
+                grid-template-columns: 1fr;
+                margin-bottom: 10px;
+            }
+
+            .cart-box img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .total {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .total-title {
+                margin-bottom: 5px;
+            }
+
+            .total-Price {
+                margin-bottom: 10px;
+            }
+
+            .btn-buy {
+                width: 100%;
+                font-size: 16px;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .payment {
+                margin: 10px;
+            }
+
+            .payment input {
+                margin-right: 5px;
+                margin-top: 5px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <h1>Kiwi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button><a href="cart.html" class="cart-link">Cart</a></button></li>
+            </ul>
+        </nav>
+        </div>
+
+        <div class="payment">
+            <h3>Payment Gateway</h3>
+            <input type="radio" id="Credit" name="payment"><label for="Credit">Credit Card</label><br>
+            <input type="radio" id="Debit" name="payment"><label for="Debit">Debit Card</label><br>
+            <input type="radio" id="UPI" name="payment"><label for="UPI">UPI</label><br>
+            <input type="radio" id="Pay" name="payment"><label for="Pay">Pay on delivery</label>
+        </div>
+
+        <div class="cart">
+            <div class="cart-title">Cart Items</div>
+            <div class="cart-content">
+            <!--
+                <div class="cart-box">
+                    <img src="img/noodles.jpg">
+                    <div class="detail-box">
+                        <div class="cart-food-title">Noodles</div>
+                        <div class="cart-price">₹159</div>
+                    </div> 
+                    <div class="price-box">
+                        <div class="cart-amt">₹159</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>                
+                 </div>
+                -->
+            </div>
+            <div class="total">
+                <div class="total-title">Total:</div>
+                <div class="total-Price">Rs.0</div>
+            </div>
+            <div><button class="btn-buy">Place Order</button></div>
+            
+        </div>
+    
+        <script src="script.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwi-Contact</title>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html{
+            background: #ececec
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9fd3c7;
+            padding: 10px;
+            border-radius: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        .header h1{
+            margin-left: 10px;
+            color:#142d4c;
+            cursor: pointer;
+        }
+
+        .header ul{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .header ul li{
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .header ul li a{
+            color: black;
+            cursor: pointer;
+        }
+
+        .header ul li a:hover{
+            color: white;
+        }
+
+        .content{
+            text-align: center;
+        }
+
+        .header button{
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        .header button:hover{
+            background-color: greenyellow;
+            color: black;
+        }
+        @media (max-width: 480px) {
+        .header h1 {
+            font-size: 20px;
+        }
+
+        .search input {
+            font-size: 14px;
+        }
+
+        .order {
+            width: 40px;
+            height: 25px;
+        }
+
+        .content h4, .content h5 {
+            font-size: 14px;
+        }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Kiwi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button><a href="cart.html" class="cart-link">Cart</a></button></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <br>
+        <h3>Welcome to Kiwi-Bringing Flavor to Your Doorstep!</h3>
+        <br><br>
+        <h5>Contact Us</h5>
+        <p>We’d Love to Hear from You!</p>
+        <p>Whether you have questions, feedback, or need assistance, our team is here to help. Please reach out using the following methods:</p>
+        <br><br>
+        <h5>Contact Information</h5>
+        <p><b>Email:</b> kiwi@gmail.com<br>
+            <b>Phone:</b> 97865xxxxx<br>
+            <b>Address:</b> Thanjavur</p>
+        <br><br>
+        <h5>Business Hours</h5>
+        <p>Our customer service team is available during the following hours:<br>
+            Monday - Friday: 9:00 AM - 6:00 PM<br>
+            Saturday: 10:00 AM - 4:00 PM<br>
+            Sunday: Closed</p>
+            <br><br>
+        <h3>Let's Be Connected</h3>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.youtube.com/">Youtube</a>
+    </div>
+</body>
+</html>

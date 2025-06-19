@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    background: #ececec
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9fd3c7;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.header h1{
+    margin-left: 10px;
+    color:#142d4c;
+    cursor: pointer;
+}
+
+.header ul{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.header ul li a{
+    color: black;
+    cursor: pointer;
+}
+
+.header ul li a:hover{
+    color: white;
+}
+
+.search input{
+    margin: 50px;
+    margin-left: 25%;
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    border-radius: 15px;
+    border: 2px #385170 solid;
+}
+
+.content{
+    background-color: rgba(159, 211, 199,0.4);
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 60px;
+    display: block;
+}
+
+.burger:hover{
+    border: 3px solid yellow;
+}
+
+.pizza:hover{
+    border: 3px solid yellow;
+}
+
+.sandwich:hover{
+    border: 3px solid yellow;
+}
+
+.french:hover{
+    border: 3px solid yellow;
+}
+
+.noodles:hover{
+    border: 3px solid yellow;
+}
+
+.hotdog:hover{
+    border: 3px solid yellow;
+}
+
+.garlic:hover{
+    border: 3px solid yellow;
+}
+
+.choco:hover{
+    border: 3px solid yellow;
+}
+.burg,.pizz,.sand,.fren,.hot,.nood,.garl,.cho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content h4{
+    margin-left: 3px;
+    padding: 3px;
+}
+
+.order{
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.order:hover{
+    background-color: black;
+    color: yellow;
+}
+
+.burger{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.pizza{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.sandwich{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.french{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.hotdog{
+    display: inline-block;
+    margin-top: 70px;
+    margin-left: 30px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.noodles{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.garlic{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.choco{
+    display: inline-block;
+    margin-left: 40px;
+    border: 3px solid #142d4c;
+    border-radius: 10px;
+}
+
+.extra{
+    height: 35px;
+}
+
+.content h5{
+    margin-left: 7px;
+    color: #004d40;
+}
+
+.header button{
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.header button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+.footer p{
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    margin-bottom: 50px;
+}
+/*.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    z-index: 2;
+}
+
+.cart-active{
+    right: 0;
+    transition: 0.5s;
+}
+
+.cart-title{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: 3px double black;
+   
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 32% 36%;
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.cart-box img{
+    width: 60px;
+    height: 60px;
+}
+
+.cart-box input{
+    width: 50px;
+    text-align: center;
+}
+
+.cart-food-title{
+    font-weight: bold;
+}
+
+.total{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+.total-title{
+    font-weight: bold;
+}
+
+.total-Price{
+    margin-right: 30px;
+}
+
+.btn-buy{
+    display: grid;
+    place-items:center;
+    padding: 6px;
+    margin:20px;
+    margin-left: 63px;
+    background-color: grey;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background-color: black;
+    color: yellow;
+}
+*/
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .search input {
+        font-size: 14px;
+    }
+
+    .order {
+        width: 40px;
+        height: 25px;
+    }
+
+    .content h4, .content h5 {
+        font-size: 14px;
+    }
+    .burger,
+    .pizza,
+    .sandwich,
+    .french,
+    .hotdog,
+    .noodles,
+    .garlic,
+    .choco {
+        margin: 10px;
+    }
+}
